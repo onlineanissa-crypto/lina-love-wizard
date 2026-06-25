@@ -8,17 +8,17 @@ import React, {
 } from "react";
 
 const loveConfig = {
-  girlfriendName: "Nour",
+  girlfriendName: "Aya",
   boyfriendName: "MY NAME",
   relationshipDate: "03/06/2026",
-  mainQuestion: "Nour, do you love me? 🥺",
+  mainQuestion: "Aya, do you love me? 🥺",
   subtitle: "Be honest... my heart is super sensitive 🥺💕",
-  finalTitle: "Yay Nour! I knew you loved me! 😍",
+  finalTitle: "Yay Aya! I knew you loved me! 😍",
   finalMessage:
-    "Nour, you just made me the happiest person alive! 🥰 Thank you for being you. I’m so lucky to have you! 💕",
+    "Aya, you just made me the happiest person alive! 🥰 Thank you for being you. I’m so lucky to have you! 💕",
 };
 
-const STORAGE_KEY = "nour-love-wizard-v1";
+const STORAGE_KEY = "aya-love-wizard-v1";
 const TOTAL_STAGES = 7;
 
 function readSavedProgress() {
@@ -319,7 +319,7 @@ export function StageOne({ complete, onBack }) {
   const sayYes = () => {
     if (locked) return;
     setLocked(true);
-    setToast("I knew it, Nour! 😍");
+    setToast("I knew it, Aya! 😍");
     setBurst(true);
     playSuccessSound();
     complete("Yes 😍");
@@ -375,7 +375,7 @@ export function StageTwo({ complete, onBack }) {
     if (answer === "Think about you 💭") {
       setLocked(true);
       setWrong("");
-      setToast("Correct, Nour! You know me so well 🥰");
+      setToast("Correct, Aya! You know me so well 🥰");
       playSuccessSound();
       complete(answer);
       return;
@@ -390,7 +390,7 @@ export function StageTwo({ complete, onBack }) {
     <StageLayout
       stage={2}
       title="What is my favorite thing to do?"
-      subtitle="Choose carefully, Nour ✨"
+      subtitle="Choose carefully, Aya ✨"
       mood="curious"
       toast={toast}
       toastType={wrong ? "hint" : "success"}
@@ -424,11 +424,11 @@ export function StageThree({ complete, onBack }) {
 
     if (answer.startsWith("Always")) {
       setLocked(true);
-      setToast("That’s the answer I wanted, Nour 💕");
+      setToast("That’s the answer I wanted, Aya 💕");
       playSuccessSound();
       complete(answer);
     } else {
-      setToast("Hmm Nour... try again 😂");
+      setToast("Hmm Aya... try again 😂");
       window.setTimeout(() => setSelected(""), 450);
     }
   };
@@ -490,7 +490,7 @@ export function LoveSlider({ value, onChange, disabled }) {
 export function StageFour({ complete, onBack }) {
   const [value, setValue] = useState(0);
   const [locked, setLocked] = useState(false);
-  const [toast, setToast] = useState("Slide it all the way, Nour 💗");
+  const [toast, setToast] = useState("Slide it all the way, Aya 💗");
   const [burst, setBurst] = useState(false);
 
   const changeValue = (nextValue) => {
@@ -502,7 +502,7 @@ export function StageFour({ complete, onBack }) {
     }
 
     setLocked(true);
-    setToast("Perfect answer, Nour! 😍");
+    setToast("Perfect answer, Aya! 😍");
     setBurst(true);
     playSuccessSound();
     complete("To the moon & back 🚀");
@@ -511,7 +511,7 @@ export function StageFour({ complete, onBack }) {
   return (
     <StageLayout
       stage={4}
-      title="How much do you love me, Nour? 💕"
+      title="How much do you love me, Aya? 💕"
       subtitle="There is definitely a correct end of this slider."
       mood="love"
       toast={toast}
@@ -762,7 +762,7 @@ export default function App() {
     <div className="app-shell">
       <FloatingHearts />
       <header className="app-header">
-        <div className="brand">For Nour <span>♥</span></div>
+        <div className="brand">For Aya <span>♥</span></div>
         <ProgressStepper currentStage={currentStage} />
       </header>
 
