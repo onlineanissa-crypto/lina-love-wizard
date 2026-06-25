@@ -10,7 +10,7 @@ import React, {
 const loveConfig = {
   girlfriendName: "Lina",
   boyfriendName: "MY NAME",
-  relationshipDate: "03/06/2026",
+  relationshipDate: "21-06-2026",
   mainQuestion: "Lina, do you love me? 🥺",
   subtitle: "Be honest... my heart is super sensitive 🥺💕",
   finalTitle: "Yay Lina! I knew you loved me! 😍",
